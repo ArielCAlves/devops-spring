@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-tp2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql-tp2
+  template:
+    metadata:
+      labels:
+        app: mysql-tp2
+    spec:
+      containers:
+        - name: mysql
+          image: arielcalvesinfnet/mysql:1.0
+          ports:
+            - containerPort: 3306
