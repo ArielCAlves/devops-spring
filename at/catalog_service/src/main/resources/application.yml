@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: catalog_service
+
+  r2dbc:
+    url: r2dbc:h2:mem:///catalog
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
